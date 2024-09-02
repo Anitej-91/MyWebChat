@@ -32,7 +32,7 @@ function addMessage(name, content){
 }
 
 function send_message(content){
-    return fetch('http://localhost:8000/send_message', {
+    return fetch('https://mywebchatserver.onrender.com/send_message', {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ function scrollToBottom() {
 }
 
 function get_message(){
-    return fetch(`http://localhost:8000/get_messages?after=${lastTimestamp}`, {method: 'GET'})
+    return fetch(`https://mywebchatserver.onrender.com/get_messages?after=${lastTimestamp}`, {method: 'GET'})
     .then((response) => response.json())
     .then((data) => {
         data.forEach(msg => {
