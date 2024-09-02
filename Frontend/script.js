@@ -72,6 +72,6 @@ submitbtn.addEventListener('click', (event) => {
     messagebox.value = '';
 })
 
-setInterval(get_message, 100);
+setInterval(get_message, 500);
 
 get_message();
